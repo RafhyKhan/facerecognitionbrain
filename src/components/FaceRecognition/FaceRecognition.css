@@ -1,0 +1,17 @@
+.bounding-box {
+	position:  absolute;
+	box-shadow:  0 0 0 3px #149df2;
+	display: -webkit-box ;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap:  wrap;
+	flex-wrap:  wrap;
+	-webkit-box-pack: center;
+	-ms-flex-pacl:  center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+/*
+This is making the boundary box and outline the person face, css for draw box
+*/
