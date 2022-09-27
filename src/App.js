@@ -104,9 +104,11 @@ We than create a box picture with css and placed ontop of image to show face in 
 /*On button submit, we execute soe of the functions above, this button is for after sign in
 the use inputs url data, than presses button to locate face. Tha we display faceboc made with css.
 */ 
+
+//we change for localhost to guarded HEROKU server
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://guarded-refuge-47284.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-type' : 'application/json'},
         body: JSON.stringify({
@@ -116,7 +118,7 @@ the use inputs url data, than presses button to locate face. Tha we display face
       .then(response => response.json())
       .then(response => { 
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://guarded-refuge-47284.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify({
